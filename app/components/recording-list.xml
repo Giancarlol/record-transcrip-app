@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout>
+    <ListView items="{{ recordings }}" height="80%">
+        <ListView.itemTemplate>
+            <StackLayout class="p-2 border-b border-gray-200">
+                <Label text="{{ name }}" class="text-lg" />
+                <Label text="{{ date }}" class="text-sm text-gray-500" />
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</StackLayout>

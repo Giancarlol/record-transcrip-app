@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Voice Notes" />
+    
+    <GridLayout rows="auto, *, auto" class="p-4">
+        <StackLayout row="0" class="mb-4">
+            <Label text="{{ status }}" class="text-lg text-center" />
+            <Label text="{{ recordingTime }}" class="text-2xl text-center" />
+        </StackLayout>
+        
+        <ListView row="1" items="{{ recordings }}" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout columns="*, auto" class="list-group-item p-2">
+                    <Label col="0" text="{{ title }}" class="text-base" />
+                    <Label col="1" text="{{ duration }}" class="text-sm text-gray-500" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <Button row="2" 
+                text="{{ isRecording ? 'Stop' : 'Record' }}" 
+                tap="{{ toggleRecording }}"
+                class="{{ isRecording ? 'bg-red-500' : 'bg-blue-500' }} text-white p-4 rounded-lg mt-4" />
+    </GridLayout>
+</Page>

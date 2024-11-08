@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout>
+    <Label text="{{ message }}" class="text-lg text-center mb-4" textWrap="true" />
+    <Button text="{{ isRecording ? 'Stop Recording' : 'Start Recording' }}" 
+            tap="{{ toggleRecording }}"
+            class="{{ isRecording ? 'bg-red-500' : 'bg-blue-500' }} text-white p-4 rounded-lg" />
+</StackLayout>

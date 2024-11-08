@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Voice Recorder" class="action-bar" />
+    
+    <StackLayout class="p-4">
+        <Label text="{{ recordingTime }}" class="text-2xl text-center m-4" />
+        
+        <Button text="{{ isRecording ? 'Stop Recording' : 'Start Recording' }}" 
+                tap="{{ isRecording ? 'stopRecording' : 'startRecording' }}"
+                class="{{ isRecording ? 'bg-red-500' : 'bg-blue-500' }} text-white p-4 rounded-lg" />
+        
+        <ListView items="{{ recordings }}" class="list-group mt-4">
+            <ListView.itemTemplate>
+                <StackLayout class="list-group-item p-2">
+                    <Label text="{{ name }}" class="font-bold" />
+                    <Label text="{{ duration }}" class="text-gray-500" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>
